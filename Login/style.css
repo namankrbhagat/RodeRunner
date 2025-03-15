@@ -1,0 +1,103 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fbfcfd;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  width: 70px; 
+  height: 70px;
+  margin-right: 8px;
+}
+
+.site-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 170px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.login-container:hover {
+  transform: translateY(-10px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background: #158df6;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0d71ce;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+  text-decoration: none;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #8c57db;
+  top: 10%;
+  left: 5%;
+  opacity: 0.5;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fbc02d;
+  bottom: 0%;
+  right: 5%;
+  opacity: 0.5;
+}

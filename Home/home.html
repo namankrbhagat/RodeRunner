@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="design.css" />
+  <title>RoadRunner</title>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo-container">
+        <img src="truck.png" alt="RoadRunner logo" class="nav__logo" id="logo" />
+        <h1 class="nav__name">RoadRunner</h1>
+      </div>
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="#section--1">Features</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--2">Operations</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--3">Testimonials</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Find Perfect Solutions for Your Fleet</h1>
+      <p class="hero__subtitle">Efficient tools that help you manage and optimize your logistics operations.</p>
+      <a href="#section--1" class="btn btn--primary">Get Started</a>
+    </div>
+  </div>
+
+  <section class="section" id="section--1">
+    <div class="section__title">
+      <h2>Features</h2>
+      <p>Everything you need to manage your fleet effectively.</p>
+    </div>
+    <div class="features">
+      <button class="feature">
+        <img src="tracking.png" alt="Real-time Tracking" class="feature__icon" />
+        <h3>Real-time Tracking</h3>
+        <p>Track your trucks in real-time with our advanced GPS technology.</p>
+      </button>
+      <button class="feature">
+        <img src="analysis.png" alt="Analytics" class="feature__icon" />
+        <h3>Analytics</h3>
+        <p>Get detailed analytics and reports to optimize your operations.</p>
+      </button>
+      <button class="feature">
+        <img src="support.png" alt="24/7 Support" class="feature__icon" />
+        <h3>24/7 Support</h3>
+        <p>Our support team is available 24/7 to assist you with any issues.</p>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="section--2">
+    <div class="section__title">
+      <h2>Operations</h2>
+      <p>Streamline your logistics operations with RoadRunner.</p>
+    </div>
+    <div class="operations">
+      <button class="operation">
+        <h3>Fleet Management</h3>
+        <p>Easily manage your fleet with our intuitive dashboard.</p>
+      </button>
+      <button class="operation">
+        <h3>Route Optimization</h3>
+        <p>Optimize routes to save time and fuel costs.</p>
+      </button>
+      <button class="operation">
+        <h3>Driver Management</h3>
+        <p>Manage driver schedules and performance efficiently.</p>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="section--3">
+    <div class="section__title">
+      <h2>Testimonials</h2>
+      <p>What our customers say about us.</p>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"RoadRunner has transformed our logistics operations. Highly recommended!"</p>
+        <h4>~ Akshay Kumar</h4>
+      </div>
+      <div class="testimonial">
+        <p>"The real-time tracking feature is a game-changer for our business."</p>
+        <h4>~ Rajpal Yadav</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 RoadRunner. All rights reserved.</p>
+  </footer>
+
+  <div class="modal hidden">
+    <button class="btn--close-modal">&times;</button>
+    <h2 class="modal__header">Open your account <br />in just <span class="highlight">5 minutes</span></h2>
+    <form class="modal__form">
+      <label>First Name</label>
+      <input type="text" />
+      <label>Last Name</label>
+      <input type="text" />
+      <label>Email Address</label>
+      <input type="email" />
+      <button class="btn">Next step &rarr;</button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
