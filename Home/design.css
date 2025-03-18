@@ -74,35 +74,55 @@ body {
   background-color: #0d71ce;
 }
 
+/* Hero Section */
 .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f4f8;
   text-align: center;
   padding: 0 2rem;
+  overflow: hidden;
 }
 
+/* Background Video */
+.hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover; /* Ensures video covers the section */
+  z-index: -1; /* Keeps video behind content */
+}
+
+/* Hero Content */
 .hero__content {
+  position: relative;
+  z-index: 1;
   max-width: 800px;
+  /* background: rgba(0, 0, 0, 0.5); Adds dark overlay for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  color: white; /* Ensures text is readable */
 }
 
 .hero__title {
-  font-size: 4rem; /* Large and bold title */
-  font-weight: 700; /* Extra bold */
-  color: #333;
+  font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  line-height: 1.2; /* Improve readability */
 }
 
 .hero__subtitle {
-  font-size: 1.5rem; /* Slightly larger subtitle */
-  color: #666;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  line-height: 1.6; /* Improve readability */
 }
 
+/* Button */
 .btn--primary {
   padding: 1rem 2rem;
   background-color: #158df6;
@@ -120,6 +140,7 @@ body {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .section {
   padding: 6rem 2rem;
