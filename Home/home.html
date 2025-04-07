@@ -6,9 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="shortcut icon" type="image/png" href="img/icon.png" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""/>
   <link rel="stylesheet" href="design.css" />
+  <!-- Leaflet CSS for maps -->
+  
   <title>RoadRunner</title>
-  <script defer src="script.js"></script>
+  <style>
+    /* Temporary debug styles */
+    #trackingMap {
+      height: 500px;
+      width: 100%;
+      background-color: #eee; /* Shows if map container is visible */
+      border: 2px solid red; /* Helps visualize container */
+    }
+    .map-container {
+      padding: 20px;
+      background: white;
+      margin: 20px 0;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -42,7 +62,6 @@
       <a href="#section--1" class="btn btn--primary">Get Started</a>
     </div>
   </div>
-  
 
   <section class="section" id="section--1">
     <div class="section__title">
@@ -50,7 +69,7 @@
       <p>Everything you need to manage your fleet effectively.</p>
     </div>
     <div class="features">
-      <button class="feature">
+      <button class="feature" id="trackingBtn">
         <img src="tracking.png" alt="Real-time Tracking" class="feature__icon" />
         <h3>Real-time Tracking</h3>
         <p>Track your trucks in real-time with our advanced GPS technology.</p>
@@ -65,6 +84,13 @@
         <h3>24/7 Support</h3>
         <p>Our support team is available 24/7 to assist you with any issues.</p>
       </button>
+    </div>
+    
+    <!-- Map Container (hidden by default) -->
+    <div class="map-container hidden" id="mapContainer">
+      <h3>Live Fleet Tracking</h3>
+      <div id="trackingMap"></div>
+      <button class="btn btn--primary" id="closeMapBtn" style="margin-top: 20px;">Close Map</button>
     </div>
   </section>
 
@@ -125,6 +151,8 @@
   </div>
   <div class="overlay hidden"></div>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""></script>
   <script src="script.js"></script>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <df-messenger
